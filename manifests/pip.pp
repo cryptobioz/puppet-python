@@ -3,7 +3,7 @@ class python::pip {
 
   $pip_package = $::osfamily ? {
     'RedHat' => 'python2-pip',
-    default  => 'python-pip',
+    'Debian' => 'python-pip',
   }
 
   package {'python-pip':
